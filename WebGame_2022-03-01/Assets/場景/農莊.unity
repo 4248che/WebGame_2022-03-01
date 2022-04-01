@@ -313,7 +313,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 222103567}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 6aad63d830c0a4c42aacfd44ef5717e0, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -422,7 +422,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 494354171}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 6aad63d830c0a4c42aacfd44ef5717e0, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -793,6 +793,7 @@ GameObject:
   - component: {fileID: 750196375}
   - component: {fileID: 750196374}
   - component: {fileID: 750196373}
+  - component: {fileID: 750196376}
   m_Layer: 0
   m_Name: "\u523A\u5BA2"
   m_TagString: Untagged
@@ -934,6 +935,19 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &750196376
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 750196369}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d079b2fd0684d264c8d1e66bec89f39a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dataWeapon: {fileID: 11400000, guid: 11f5b3de14953b54d95fba350e57bb15, type: 2}
 --- !u!1 &934462864
 GameObject:
   m_ObjectHideFlags: 0
@@ -2179,7 +2193,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 1660608573}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 6aad63d830c0a4c42aacfd44ef5717e0, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -2223,7 +2237,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 1712610128}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 6aad63d830c0a4c42aacfd44ef5717e0, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0

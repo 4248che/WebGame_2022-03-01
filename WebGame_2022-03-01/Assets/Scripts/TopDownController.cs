@@ -18,7 +18,7 @@ namespace GG
 		#region CC1
 		private void Awake()
 		{
-			print("OG~");
+			//print("OG~");
 			
 			ani = GetComponent<Animator>();
 			rig = GetComponent<Rigidbody2D>();
@@ -39,7 +39,7 @@ namespace GG
 			h = Input.GetAxis("Horizontal");
 			v = Input.GetAxis("Vertical");
 			
-			print("LINE : " + h );
+			//print("LINE : " + h );
 		}
 		
 		private void Move()
