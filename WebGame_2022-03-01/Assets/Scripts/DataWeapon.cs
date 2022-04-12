@@ -18,7 +18,11 @@ namespace GG
 		
 		[Header("Generate location")]
 		public Vector3[] v3SpawnPoint;
-	}
+        [Header("武器預知物")]
+        public GameObject goWeapon;
+        [Header("飛行方向")]
+        public Vector3 v3Direction;
+    }
 
 }
 

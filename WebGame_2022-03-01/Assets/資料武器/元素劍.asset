@@ -10,14 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 04e7ef4b2eb2a484b8b84bb2d64a0e9f, type: 3}
-  m_Name: "\u5F13\u7BAD"
+  m_Name: "\u5143\u7D20\u528D"
   m_EditorClassIdentifier: 
   speed: 500
   attack: 10
   countStart: 1
   countMax: 10
-  interval: 3.5
+  interval: 3
   v3SpawnPoint:
   - {x: -0.3, y: 0, z: 0}
   - {x: 0, y: 0.3, z: 0}
   - {x: 0.3, y: 0, z: 0}
+  goWeapon: {fileID: 2204698572856988593, guid: 5e81dfeed484f634dbe6a08bf70d3f4a, type: 3}
+  v3Direction: {x: 0, y: 1, z: 0}
