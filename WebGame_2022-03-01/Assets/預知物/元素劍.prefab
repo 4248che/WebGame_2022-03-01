@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 7287934862817525161}
   - component: {fileID: 5724349011956780685}
   - component: {fileID: 1027587020582817191}
+  - component: {fileID: -1854086505534318019}
   m_Layer: 6
   m_Name: "\u5143\u7D20\u528D"
   m_TagString: Untagged
@@ -133,3 +134,16 @@ ConstantForce2D:
   m_Force: {x: 0, y: 0}
   m_RelativeForce: {x: 0, y: 0}
   m_Torque: -60
+--- !u!114 &-1854086505534318019
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2204698572856988593}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4d8edfd7d5d95941891cbe13041cf39, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attack: 0

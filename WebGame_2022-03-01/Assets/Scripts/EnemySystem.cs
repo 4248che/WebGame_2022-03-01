@@ -1,20 +1,26 @@
+
 using UnityEngine;
 
 public class EnemySystem : MonoBehaviour
 {
-    [SerializeField, Header("¼Ä¤H¸ê®Æ")]
+    [SerializeField, Header("ï¿½Ä¤Hï¿½ï¿½ï¿½")]
     private DataEnemy data;
-    [SerializeField, Header("ª±®aª«¥ó¦WºÙ")]
-    private string namePlayer = "¨ë«È";
+    [SerializeField, Header("ï¿½ï¿½ï¿½aï¿½ï¿½ï¿½ï¿½Wï¿½ï¿½")]
+    private string namePlayer = "ï¿½ï¿½ï¿½";
 
     private Transform traPlayer;
+	private float timerAttack;
+	private Animator ani;
+	private string parameterAttack = "è§¸ç™¼æ”»æ“Š";
 
     private void Awake()
     {
-        traPlayer = GameObject.Find(namePlayer).transform;
+        ani = GetComponent<Animator>();
+		
+		traPlayer = GameObject.Find(namePlayer).transform;
 
         //float result = Mathf.Lerp(0, 100, 0.5f);
-        //print("0»P 100 ªº 0.5 ´¡­Èµ²ªG:" + result);
+        //print("0ï¿½P 100 ï¿½ï¿½ 0.5 ï¿½ï¿½ï¿½Èµï¿½ï¿½G:" + result);
     }
 
     float a = 0;
@@ -23,18 +29,48 @@ public class EnemySystem : MonoBehaviour
     private void Update()
     {
         //a = Mathf.Lerp(a, b, 0.5f);
-        //print("´ú¸Õµ²ªG:" + a);
+        //print("ï¿½ï¿½ï¿½Õµï¿½ï¿½G:" + a);
         MoveToPlayer();
     }
+	
+	private void OnDrawGizmos()
+	{
+		Gizmos.color = new Color(1, 0.5f, 0, 0.5f);
+		Gizmos.DrawSphere(transform.position, data.stopDistance);
+	}
 
     private void MoveToPlayer()
     {
         Vector3 posEnemy = transform.position;
         Vector3 posPlayer = traPlayer.position;
+		
+		float dis = Vector3.Distance(posEnemy, posPlayer);
+		//print("<color=yellow>distance : " + dis + "</color>");
+		
+		if (dis < data.stopDistance)
+		{
+			Attack();
+		}
+		else
+		{
+			transform.position = Vector3.Lerp(posEnemy, posPlayer, 0.5f * data.speed * Time.deltaTime);
 
-        transform.position = Vector3.Lerp(posEnemy, posPlayer, 0.5f * data.speed * Time.deltaTime);
-
-        float y = transform.position.x > traPlayer.position.x ? 180 : 0;
-        transform.eulerAngles = new Vector3(0, y, 0);
+            float y = transform.position.x > traPlayer.position.x ? 180 : 0;
+            transform.eulerAngles = new Vector3(0, y, 0);
+		}
     }
+	
+	private void Attack()
+	{
+		if(timerAttack < data.cd)
+		{
+			timerAttack += Time.deltaTime;
+			print("<color=red>AttackTimer :" + timerAttack + "</color>");
+		}
+		else
+		{
+			ani.SetTrigger(parameterAttack);
+			timerAttack = 0;
+		}
+	}
 }

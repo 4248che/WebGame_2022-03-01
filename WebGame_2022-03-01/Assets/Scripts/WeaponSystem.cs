@@ -50,6 +50,8 @@ namespace GG
 				temp.GetComponent<Rigidbody2D>().AddForce(dataWeapon.v3Direction * dataWeapon.speed);
 
 				timer = 0;
+				
+				temp.GetComponent<Weapon>().attack = dataWeapon.attack;
 			}
 		}
 	}

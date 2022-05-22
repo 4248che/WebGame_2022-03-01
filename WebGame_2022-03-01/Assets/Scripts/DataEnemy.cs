@@ -3,18 +3,20 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "GG/Data Enemy" , fileName = "Data Enemy")]
 public class DataEnemy : ScriptableObject
 {
-    [Header("²¾°Ê³t«×"), Range(0, 50)]
+    [Header("ï¿½ï¿½ï¿½Ê³tï¿½ï¿½"), Range(0, 50)]
     public float speed = 30;
-    [Header("§ðÀ»¤O"), Range(0, 500)]
+    [Header("ï¿½ï¿½ï¿½ï¿½ï¿½O"), Range(0, 500)]
     public float attack = 30;
-    [Header("§ðÀ»§N«o"), Range(0, 7)]
+    [Header("ï¿½ï¿½ï¿½ï¿½ï¿½Nï¿½o"), Range(0, 7)]
     public float cd  = 3.5f;
-    [Header("¦å¶q"), Range(0, 5000)]
+    [Header("ï¿½ï¿½q"), Range(0, 5000)]
     public float hp = 30;
-    [Header("±¼¸¨¸gÅç­È¾÷²v"), Range(0, 1)]
+    [Header("ï¿½ï¿½ï¿½ï¿½ï¿½gï¿½ï¿½È¾ï¿½ï¿½v"), Range(0, 1)]
     public float expDropProbability = 0.8f;
-    [Header("±¼¸¨¸g­ÈÃþ«¬")]
+    [Header("ï¿½ï¿½ï¿½ï¿½ï¿½gï¿½ï¿½ï¿½ï¿½ï¿½ï¿½")]
     public TypeExp typeExp;
+	[Header("stopDistance"), Range(0, 10)]
+    public float stopDistance = 1.5f;
 }
 
 public enum TypeExp
