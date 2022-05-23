@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04e7ef4b2eb2a484b8b84bb2d64a0e9f, type: 3}
   m_Name: "\u5143\u7D20\u528D"
   m_EditorClassIdentifier: 
-  speed: 500
+  speed: 504
   attack: 10
-  countStart: 1
-  countMax: 10
-  interval: 3
+  countStart: 10
+  countMax: 5
+  interval: 1
   v3SpawnPoint:
   - {x: -0.3, y: 0, z: 0}
   - {x: 0, y: 0.3, z: 0}
